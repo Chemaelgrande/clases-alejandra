@@ -4,4 +4,6 @@ class VarUtils {
   String text2 = "Esto es text2";
 
   bool isOpen = true;
+
+  int initNumber = 1;
 }
