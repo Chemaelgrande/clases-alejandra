@@ -6,4 +6,12 @@ class VarUtils {
   bool isOpen = true;
 
   int initNumber = 1;
+
+  void changeName() {
+    String alejandra = "alejandra";
+    alejandra = "Maria";
+    alejandra = "alejandra";
+
+    print(alejandra);
+  }
 }

@@ -6,6 +6,7 @@ class CounterState {
   const CounterState({required this.counter});
 
   factory CounterState.initial() {
+    VarUtils().changeName();
     return const CounterState(counter: 1);
   }
 

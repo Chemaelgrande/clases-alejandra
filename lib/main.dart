@@ -21,14 +21,18 @@ class MyApp extends StatelessWidget {
           create: (context) => ThemeBloc(),
         ),
       ],
-      child: BlocBuilder<ThemeBloc, ThemeState>(
+      child: BlocBuilder<CounterCubit, CounterState>(
         builder: (context, state) {
-          return MaterialApp(
-            title: 'Material App',
-            home: ThemePage(),
-            theme: (state.appTheme == AppTheme.light)
-                ? ThemeData.light()
-                : ThemeData.dark(),
+          return BlocBuilder<ThemeBloc, ThemeState>(
+            builder: (context, state) {
+              return MaterialApp(
+                title: 'Material App',
+                home: ThemePage(),
+                theme: (state.appTheme == AppTheme.light)
+                    ? ThemeData.light()
+                    : ThemeData.dark(),
+              );
+            },
           );
         },
       ),
